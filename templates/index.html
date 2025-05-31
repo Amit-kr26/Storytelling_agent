@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Novel Generator</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>✨ AI Novel Generator</h1>
+            <p>Create unique stories with artificial intelligence</p>
+        </header>
+        
+        <form method="post" action="/generate/" class="generator-form">
+            <div class="form-group">
+                <label for="topic">Story Topic</label>
+                <input type="text" id="topic" name="topic" placeholder="Enter a topic or leave blank for random">
+            </div>
+            
+            <div class="form-group">
+                <label for="model">AI Model</label>
+                <select id="model" name="model">
+                    <option value="gemini-2.0-flash" selected>Gemini 2.0 Flash</option>
+                    <option value="gemini-1.5-pro">Gemini 1.5 Pro</option>
+                    <option value="gpt-4-turbo">GPT-4 Turbo</option>
+                    <option value="claude-3-opus">Claude 3 Opus</option>
+                </select>
+            </div>
+            
+            <div class="params-grid">
+                <div class="form-group">
+                    <label for="temperature">Creativity (0-1)</label>
+                    <input type="number" id="temperature" name="temperature" 
+                        min="0" max="1" step="0.1" value="0.7">
+                </div>
+                
+                <div class="form-group">
+                    <label for="top_p">Diversity (0-1)</label>
+                    <input type="number" id="top_p" name="top_p" 
+                        min="0" max="1" step="0.1" value="1.0">
+                </div>
+                
+                <div class="form-group">
+                    <label for="max_tokens">Max Length</label>
+                    <input type="number" id="max_tokens" name="max_tokens" 
+                        min="500" max="10000" value="4096">
+                </div>
+            </div>
+            
+            <button type="submit" class="generate-btn">Generate Novel</button>
+        </form>
+        
+        <div class="features">
+            <div class="feature-card">
+                <h3>📖 Unique Stories</h3>
+                <p>Every novel is completely original</p>
+            </div>
+            <div class="feature-card">
+                <h3>⚙️ Customizable</h3>
+                <p>Adjust creativity and length</p>
+            </div>
+            <div class="feature-card">
+                <h3>📥 Instant Download</h3>
+                <p>Get your story in text format</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

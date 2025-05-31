@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Novel is Ready!</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container result-container">
+        <header>
+            <h1>🎉 Your Novel is Ready!</h1>
+            <p>Successfully generated "<strong>{{ title }}</strong>"</p>
+        </header>
+        
+        <div class="result-details">
+            <div class="detail-card">
+                <h3>Topic</h3>
+                <p>{{ topic }}</p>
+            </div>
+            <div class="detail-card">
+                <h3>AI Model</h3>
+                <p>{{ model }}</p>
+            </div>
+            <div class="detail-card">
+                <h3>Parameters</h3>
+                <p>Temp: {{ temperature }} | Top P: {{ top_p }} | Tokens: {{ max_tokens }}</p>
+            </div>
+        </div>
+        
+        <div class="actions">
+            <a href="/download/{{ filename }}" class="download-btn">Download Novel</a>
+            <a href="/" class="new-btn">Create Another</a>
+        </div>
+        
+        <footer>
+            <p>Want to customize more? Try adjusting the parameters!</p>
+        </footer>
+    </div>
+</body>
+</html>
