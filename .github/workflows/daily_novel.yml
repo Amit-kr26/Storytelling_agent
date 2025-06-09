@@ -1,8 +1,8 @@
 name: Daily Novel Generation
 
 on:
-  schedule:
-    - cron: '30 18 * * *' 
+  # schedule:
+  #   - cron: '30 18 * * *' 
   workflow_dispatch:  
 
 jobs:
